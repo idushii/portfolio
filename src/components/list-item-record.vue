@@ -58,7 +58,7 @@ export default {
     computed: {
         img() {
             if (this.prev)
-                return `/img/prev/${this.prev}`
+                return `https://idushii.github.io/portfolio/img/prev/${this.prev}`
             else 
                 return `https://via.placeholder.com/150`
         },
