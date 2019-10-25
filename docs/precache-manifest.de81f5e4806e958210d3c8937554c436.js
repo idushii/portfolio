@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a608f2e3f094091cf706",
-    "url": "https://idushii.github.io/portfolio/css/app.95a9ba09.css"
+    "revision": "be1bade145e68bc6a5b5",
+    "url": "https://idushii.github.io/portfolio/css/app.41e9b38d.css"
   },
   {
     "revision": "e73afe21e347342b7a1f",
@@ -56,7 +56,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://idushii.github.io/portfolio/img/prev/9.jpg"
   },
   {
-    "revision": "70d45e5e54dc30c8bfb9e0bbbbcd45d7",
+    "revision": "a7f26603860d92ac7c9b65c81eb5850a",
     "url": "https://idushii.github.io/portfolio/index.html"
   },
   {
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://idushii.github.io/portfolio/js/about.d99facbe.js"
   },
   {
-    "revision": "a608f2e3f094091cf706",
-    "url": "https://idushii.github.io/portfolio/js/app.66824440.js"
+    "revision": "be1bade145e68bc6a5b5",
+    "url": "https://idushii.github.io/portfolio/js/app.1a2bad0d.js"
   },
   {
     "revision": "e73afe21e347342b7a1f",
