@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://idushii.github.io/portfolio/docs/precache-manifest.1b64d17a45b6fd2181f5eca7d0ef5b5e.js"
+  "https://idushii.github.io/portfolio/precache-manifest.b487b33f785469e5ff1c91ead02d2e33.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "my-page"});

@@ -1,4 +1,4 @@
 module.exports = {
   outputDir: 'docs',
-  publicPath: 'https://idushii.github.io/portfolio/docs/'
+  publicPath: 'https://idushii.github.io/portfolio/'
 }
