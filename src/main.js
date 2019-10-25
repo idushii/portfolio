@@ -6,6 +6,9 @@ import './registerServiceWorker'
 
 Vue.config.productionTip = false
 
+require("materialize-css/dist/js/materialize.js")
+require("materialize-css/dist/css/materialize.css")
+
 new Vue({
   router,
   store,
