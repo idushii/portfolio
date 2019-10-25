@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Ильинов Николай. Проекты.</a>
+        <a href="#" class="brand-logo">ИП Ильинов Николай</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
         </ul>
       </div>
@@ -14,4 +14,7 @@
 </template>
 
 <style lang="scss">
+.brand-logo {
+  margin-left: 1rem;
+}
 </style>
