@@ -6,8 +6,8 @@
       </div>
       <div class="card-content">
         <span class="card-title activator grey-text text-darken-4">
-          {{title}}
           <i class="material-icons right">more_vert</i>
+          {{title}}
         </span>
         <p>
           <a :href="MainLink" target="_blank">Ссылка</a>
@@ -15,8 +15,8 @@
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">
-          {{title}}
           <i class="material-icons right">close</i>
+          {{title}}
         </span>
         <p>{{desc}}</p>
         <a :href="link" v-if="link" target="_blank">Ссылка</a>
