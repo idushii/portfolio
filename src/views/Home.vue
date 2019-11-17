@@ -10,9 +10,10 @@
         </label>
       </div>
     </div>
+    <div class="col s12"  :class="[inColumn ? 'row' : 'my-grid']">
 
     <list-item-record
-      :class="[inColumn ? 'col s12' : 'col s6 m4']"
+      :class="[inColumn ? 'col s12' : '']"
       v-for="(item, index) in items"
       :key="`item-${index}`"
       :title="item.title"
@@ -22,6 +23,7 @@
       :prev="item.prev"
       :in-column="inColumn"
     />
+    </div>
   </div>
 </template>
 
@@ -51,6 +53,12 @@ export default {
 
 .switch {
   height: 3rem;
+}
+
+.my-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
 }
 
 </style>
