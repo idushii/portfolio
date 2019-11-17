@@ -8,6 +8,7 @@ export default new Vuex.Store({
     projects: [
       {
         title: 'Профиль github',
+        desc: 'Мой профиль github',
         link: 'https://github.com/idushii',
         prev: '1.jpg',
       },
