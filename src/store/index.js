@@ -15,6 +15,12 @@ export default new Vuex.Store({
         img: '1.jpg',
       },
       {
+        title: 'Профиль stackoverflow',
+        desc: 'Мой профиль stackoverflow',
+        link: new Link('https://ru.stackoverflow.com/users/208471/%d0%9d%d0%b8%d0%ba%d0%be%d0%bb%d0%b0%d0%b9'),
+        img: '14.jpg',
+      },
+      {
         title: 'Генерация xlsx файла',
         desc: 'Форма генерации xlsx таблицы с помощью vue js по заранее заданной таблице артикулов',
         link: new Link('http://simle-db.j693917.myjino.ru/'),
