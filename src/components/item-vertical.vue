@@ -9,7 +9,7 @@
         {{smallTitle || title}}
       </span>
       <p>
-        <a :href="link" target="_blank">Ссылка</a>
+        <a :href="link.url" target="_blank">Ссылка</a>
       </p>
     </div>
     <div class="card-reveal">
