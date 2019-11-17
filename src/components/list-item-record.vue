@@ -5,10 +5,10 @@
       :title="title"
       :img="img"
       :desc="desc"
-      :link="link"
+      :link="MainLink"
       :links="links"
     />
-    <ItemHorizontal v-else :title="title" :img="img" :desc="desc" :link="link" :links="links" />
+    <ItemHorizontal v-else :title="title" :img="img" :desc="desc" :link="MainLink" :links="links" />
   </div>
 </template>
 
