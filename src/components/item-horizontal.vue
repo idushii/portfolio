@@ -38,4 +38,7 @@ export default class ItemHorizontal extends Vue implements IItem {
 </script>
 
 <style lang="scss" scoped>
+.card.horizontal .card-image img {
+  width: 300px;
+}
 </style>
