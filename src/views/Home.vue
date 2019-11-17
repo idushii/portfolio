@@ -17,6 +17,7 @@
       v-for="(item, index) in items"
       :key="`item-${index}`"
       :title="item.title"
+      :smallTitle="item.smallTitle"
       :desc="item.desc"
       :link="item.link"
       :links="item.links"
