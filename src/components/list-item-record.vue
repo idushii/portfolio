@@ -4,9 +4,9 @@
       v-if="!inColumn"
       :title="title"
       :smallTitle="smallTitle"
-      :img="img"
+      :img="_img"
       :desc="desc"
-      :link="MainLink"
+      :link="_link"
       :links="links"
     />
     <ItemHorizontal v-else :title="title" :img="img" :desc="desc" :link="MainLink" :links="links" />
@@ -16,53 +16,31 @@
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import { ILink, Link } from "./Link";
-import { IItem } from "./Item";
+import { IRecord } from "./Item";
 import ItemVertival from "./item-vertical.vue";
 import ItemHorizontal from "./item-horizontal.vue";
 
 @Component({
   components: { ItemVertival, ItemHorizontal }
 })
-export default class ListItemRecord extends Vue implements IItem {
+export default class ListItemRecord extends Vue implements IRecord {
   @Prop(Boolean) inColumn: boolean;
-  @Prop(String) prev: string;
+  @Prop(String) img: string;
   @Prop(String) title: string;
-  @Prop([String, Boolean]) smallTitle: string |  false;
+  @Prop([String, Boolean]) smallTitle: string | false;
   @Prop(String) desc: string;
-  @Prop([String, Boolean]) link: Link | false;
+  @Prop([Object, Boolean]) link: Link | false;
   @Prop(Array) links: ILink[];
 
-  get img() {
-    if (this.prev)
-      return `https://idushii.github.io/portfolio/img/prev/${this.prev}`;
+  get _img() {
+    if (this.img)
+      return `https://idushii.github.io/portfolio/img/prev/${this.img}`;
     else return `https://via.placeholder.com/150`;
   }
-  get MainLink() {
+  get _link() {
     if (this.link) return this.link;
 
     return new Link(this.links[0].link);
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.card {
-  .card-image {
-    height: 18vw;
-  }
-  .card-title {
-    display: inline-block;
-    height: 4rem;
-  }
-  &.horizontal {
-    .card-image {
-      height: auto;
-      width: 18vw;
-    }
-    .card-title {
-      display: inline-block;
-      height: auto;
-    }
-  }
-}
-</style>

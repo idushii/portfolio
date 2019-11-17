@@ -20,7 +20,7 @@
         :desc="item.desc"
         :link="item.link"
         :links="item.links"
-        :prev="item.prev"
+        :img="item.img"
         :in-column="inColumn"
       />
     </div>

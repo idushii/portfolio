@@ -9,4 +9,15 @@ interface IItem {
   links: ILink[];
 }
 
-export { IItem }
+interface IRecord {
+  inColumn: boolean;
+  img: string;
+  title: string;
+  smallTitle: string | false;
+  desc: string;
+  link: Link | false;
+  links: ILink[];
+}
+
+
+export { IItem, IRecord }
