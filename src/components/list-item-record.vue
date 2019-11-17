@@ -9,7 +9,7 @@
       :link="_link"
       :links="links"
     />
-    <ItemHorizontal v-else :title="title" :img="img" :desc="desc" :link="MainLink" :links="links" />
+    <ItemHorizontal v-else :title="title" :img="_img" :desc="desc" :link="MainLink" :links="links" />
   </div>
 </template>
 
