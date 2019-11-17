@@ -18,7 +18,7 @@
         {{title}}
       </span>
       <p>{{desc}}</p>
-      <a :href="link.url" v-if="!links  && link" target="_blank">Ссылка</a>
+      <a :href="link.url" v-if="!links && link" class="default-link" target="_blank">Ссылка</a>
       <template v-if="links">
         <p v-for="{link, title} in links" :key="`item-${link}`">
           <a :href="link" target="_blank">{{title}}</a>
@@ -32,15 +32,16 @@
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 
 import { ILink } from "./Link";
+import { IItem } from "./Item";
 
 @Component
-export default class ItemVertical extends Vue {
-  @Prop(String) private title: string;
-  @Prop([String, Boolean]) private smallTitle: string | boolean;
-  @Prop(String) private img: string;
-  @Prop(String) private desc: string;
-  @Prop([Object, Boolean]) private link: string | boolean;
-  @Prop(Array) private links: ILink[];
+export default class ItemVertical extends Vue implements IItem {
+  @Prop(String) title: string;
+  @Prop([String, Boolean]) smallTitle: string | boolean;
+  @Prop(String) img: string;
+  @Prop(String) desc: string;
+  @Prop([Object, Boolean]) link: ILink | boolean;
+  @Prop(Array) links: ILink[];
 }
 </script>
 
