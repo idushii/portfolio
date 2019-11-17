@@ -30,6 +30,7 @@ export default new Vuex.Store({
         prev: '4.jpg',
       },
       {
+        smallTitle: '"Изучение китайского языка"',
         title: 'Проект "Изучение китайского языка"',
         desc: 'Реализовано с использованием Nuxt JS',
         links: [{ link: 'http://sayana.surge.sh', title: 'Заготовка front' }, { link: 'https://github.com/idushii/Kitai', title: 'Полный репозиторий' }],
