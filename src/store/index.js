@@ -40,16 +40,16 @@ export default new Vuex.Store({
       {
         title: 'Проект "Чат"',
         desc: 'Реализовано с использованием websockets',
-        links: [{ link: 'http://chat.j693917.myjino.ru/#/', title: 'Демо front' }, 
-        { link: 'https://bitbucket.org/Nic34_/chat/', title: 'Репозиторий front' }, 
+        links: [{ link: 'http://chat.j693917.myjino.ru/#/', title: 'Демо front' },
+        { link: 'https://bitbucket.org/Nic34_/chat/', title: 'Репозиторий front' },
         { link: 'https://bitbucket.org/Nic34_/chat-server/', title: 'Репозиторий back' }],
         prev: '6.jpg',
       },
       {
         title: 'Генератор иконок окон',
         desc: 'npm пакет генерации иконок окон',
-        links: [{ link: 'http://heavenly-effect.surge.sh/', title: 'Вариант 1' }, 
-        { link: 'http://window-icon.surge.sh/', title: 'Вариант 2' }, 
+        links: [{ link: 'http://heavenly-effect.surge.sh/', title: 'Вариант 1' },
+        { link: 'http://window-icon.surge.sh/', title: 'Вариант 2' },
         { link: 'https://www.npmjs.com/package/windows-icon-generate', title: 'Сам npm пакет' }],
         prev: '7.jpg',
       },
@@ -63,8 +63,8 @@ export default new Vuex.Store({
         title: 'Расширение vs code',
         desc: 'Расширение для упрощения генерации файл-компонентов vue js. Полное название: "generator-vue-components"',
         links: [
-          {link:"https://marketplace.visualstudio.com/items?itemName=Nic34.generator-vue-components", title: 'vs code marketplace'},
-          {link:"https://github.com/idushii/generator-vue-components", title: 'Репозиторий'}
+          { link: "https://marketplace.visualstudio.com/items?itemName=Nic34.generator-vue-components", title: 'vs code marketplace' },
+          { link: "https://github.com/idushii/generator-vue-components", title: 'Репозиторий' }
         ],
         prev: '9.jpg',
       },
@@ -72,7 +72,7 @@ export default new Vuex.Store({
         title: 'PDF make JS',
         desc: 'Изучение генерации pdf с использованием фреймворка pdfmake. Пример взят случайный. Все совпадения данных исключительно случайны.',
         links: [
-          {link:"http://pdfmake.surge.sh", title: 'Ссылка'}
+          { link: "http://pdfmake.surge.sh", title: 'Ссылка' }
         ],
         prev: '10.jpg',
       },
@@ -80,8 +80,8 @@ export default new Vuex.Store({
         title: 'Video record API',
         desc: 'Измение процесса записи монитора с использованием api google chrome',
         links: [
-          {link:"http://nic34-record-screen.surge.sh", title: 'Ссылка'},
-          {link:"https://bitbucket.org/Nic34_/record-screen", title: 'Репозиторий'},
+          { link: "http://nic34-record-screen.surge.sh", title: 'Ссылка' },
+          { link: "https://bitbucket.org/Nic34_/record-screen", title: 'Репозиторий' },
         ],
         prev: '11.jpg',
       },
@@ -89,10 +89,19 @@ export default new Vuex.Store({
         title: 'API озвучивания текста',
         desc: 'изучение api озвучки текста',
         links: [
-          {link:"http://say.surge.sh/", title: 'Ссылка'},
+          { link: "http://say.surge.sh/", title: 'Ссылка' },
         ],
         prev: '12.jpg',
       },
+      {
+        title: 'API hh ru',
+        desc: 'Изучение api hh ru',
+        links: [
+          { link: 'https://idushii.github.io/hhru/', title: 'Ссылка' },
+          { link: 'https://github.com/idushii/hhru', title: 'Репозиторий' },
+        ],
+        prev: '13.jpg'
+      }
     ]
   },
   mutations: {
