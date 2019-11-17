@@ -9,7 +9,7 @@
           <p v-text="desc" />
         </div>
         <div class="card-action">
-          <a :href="link" v-if="link" target="_blank">Ссылка</a>
+          <a :href="link" v-if="link.url" target="_blank">Ссылка</a>
           <template v-if="links">
             <p v-for="{link, title} in links" :key="`item-${link}`">
               <a :href="link" target="_blank">{{title}}</a>
@@ -30,7 +30,7 @@ export default class ItemHorizontal extends Vue {
   @Prop(String) private title: string;
   @Prop(String) private img: string;
   @Prop(String) private desc: string;
-  @Prop([String, Boolean]) private link: string|boolean;
+  @Prop([Object, Boolean]) private link: ILink|boolean;
   @Prop(Array) private links: ILink[];
 }
 </script>

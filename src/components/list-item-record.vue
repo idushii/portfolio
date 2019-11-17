@@ -3,6 +3,7 @@
     <ItemVertival
       v-if="!inColumn"
       :title="title"
+      :smallTitle="smallTitle"
       :img="img"
       :desc="desc"
       :link="MainLink"
@@ -14,7 +15,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
-import { ILink } from "./Link";
+import { ILink, Link } from "./Link";
 import ItemVertival from "./item-vertical.vue";
 import ItemHorizontal from "./item-horizontal.vue";
 
@@ -25,8 +26,9 @@ export default class ListItemRecord extends Vue {
   @Prop(Boolean) private inColumn: boolean;
   @Prop(String) private prev: string;
   @Prop(String) private title: string;
+  @Prop([String, Boolean]) private smallTitle: string |  boolean;
   @Prop(String) private desc: string;
-  @Prop([String, Boolean]) private link: string | boolean;
+  @Prop([String, Boolean]) private link: string;
   @Prop(Array) private links: ILink[];
 
   get img() {
@@ -35,8 +37,9 @@ export default class ListItemRecord extends Vue {
     else return `https://via.placeholder.com/150`;
   }
   get MainLink() {
-    if (this.link) return this.link;
-    return this.links[0].link;
+    if (this.link) return new Link('Ссылка', this.link);
+
+    return new Link('Ссылка', this.links[0].link);
   }
 }
 </script>

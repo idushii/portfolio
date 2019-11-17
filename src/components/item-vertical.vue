@@ -1,12 +1,12 @@
 <template>
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" :src="img" v-if="img" />
+      <img class="activator" :src="img" />
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">
         <i class="material-icons right">more_vert</i>
-        {{title}}
+        {{smallTitle || title}}
       </span>
       <p>
         <a :href="link" target="_blank">Ссылка</a>
@@ -18,7 +18,7 @@
         {{title}}
       </span>
       <p>{{desc}}</p>
-      <a :href="link" v-if="link" target="_blank">Ссылка</a>
+      <a :href="link" v-if="link.url" target="_blank">Ссылка</a>
       <template v-if="links">
         <p v-for="{link, title} in links" :key="`item-${link}`">
           <a :href="link" target="_blank">{{title}}</a>
@@ -36,12 +36,27 @@ import { ILink } from "./Link";
 @Component
 export default class ItemVertical extends Vue {
   @Prop(String) private title: string;
+  @Prop([String, Boolean]) private smallTitle: string | boolean;
   @Prop(String) private img: string;
   @Prop(String) private desc: string;
-  @Prop([String, Boolean]) private link: string | boolean;
+  @Prop([Object, Boolean]) private link: string | boolean;
   @Prop(Array) private links: ILink[];
 }
 </script>
 
 <style lang="scss" scoped>
+.card {
+  display: grid;
+  grid-template-rows: 15rem 9rem;
+
+  .card-image {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-content {
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+}
 </style>
