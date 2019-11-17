@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
       <div class="nav-wrapper indigo darken-1">
-        <a href="#" class="brand-logo">ИП Ильинов Николай</a>
+        <router-link to="/" class="brand-logo">ИП Ильинов Николай</router-link>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
             <router-link to="/">Портфолио</router-link>
