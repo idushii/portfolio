@@ -10,20 +10,19 @@
         </label>
       </div>
     </div>
-    <div class="col s12"  :class="[inColumn ? 'row' : 'my-grid']">
-
-    <list-item-record
-      :class="[inColumn ? 'col s12' : '']"
-      v-for="(item, index) in items"
-      :key="`item-${index}`"
-      :title="item.title"
-      :smallTitle="item.smallTitle"
-      :desc="item.desc"
-      :link="item.link"
-      :links="item.links"
-      :prev="item.prev"
-      :in-column="inColumn"
-    />
+    <div class="col s12" :class="[inColumn ? 'row' : 'my-grid']">
+      <list-item-record
+        :class="[inColumn ? 'col s12' : '']"
+        v-for="(item, index) in items"
+        :key="`item-${index}`"
+        :title="item.title"
+        :smallTitle="item.smallTitle"
+        :desc="item.desc"
+        :link="item.link"
+        :links="item.links"
+        :prev="item.prev"
+        :in-column="inColumn"
+      />
     </div>
   </div>
 </template>
@@ -31,6 +30,7 @@
 <script>
 // @ is an alias to /src
 import ListItemRecord from "../components/list-item-record";
+import { Link } from "@/components/Link";
 export default {
   name: "home",
   computed: {
@@ -39,7 +39,7 @@ export default {
     }
   },
   data: () => ({
-    inColumn: false,
+    inColumn: false
   }),
   components: {
     ListItemRecord
@@ -61,5 +61,4 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1rem;
 }
-
 </style>

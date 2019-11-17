@@ -16,20 +16,21 @@
 <script lang="ts">
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
 import { ILink, Link } from "./Link";
+import { IItem } from "./Item";
 import ItemVertival from "./item-vertical.vue";
 import ItemHorizontal from "./item-horizontal.vue";
 
 @Component({
   components: { ItemVertival, ItemHorizontal }
 })
-export default class ListItemRecord extends Vue {
-  @Prop(Boolean) private inColumn: boolean;
-  @Prop(String) private prev: string;
-  @Prop(String) private title: string;
-  @Prop([String, Boolean]) private smallTitle: string |  boolean;
-  @Prop(String) private desc: string;
-  @Prop([String, Boolean]) private link: string;
-  @Prop(Array) private links: ILink[];
+export default class ListItemRecord extends Vue implements IItem {
+  @Prop(Boolean) inColumn: boolean;
+  @Prop(String) prev: string;
+  @Prop(String) title: string;
+  @Prop([String, Boolean]) smallTitle: string |  false;
+  @Prop(String) desc: string;
+  @Prop([String, Boolean]) link: Link | false;
+  @Prop(Array) links: ILink[];
 
   get img() {
     if (this.prev)
@@ -37,9 +38,9 @@ export default class ListItemRecord extends Vue {
     else return `https://via.placeholder.com/150`;
   }
   get MainLink() {
-    if (this.link) return new Link('Ссылка', this.link);
+    if (this.link) return this.link;
 
-    return new Link('Ссылка', this.links[0].link);
+    return new Link(this.links[0].link);
   }
 }
 </script>

@@ -9,7 +9,7 @@
         <p v-text="desc" />
       </div>
       <div class="card-action">
-        <a :href="link.url" class="default-link" v-if="!links && link" target="_blank">Ссылка</a>
+        <a :href="link.url" class="default-link" v-if="!links && link" target="_blank">{{link.title}}</a>
         <template v-if="links">
           <p v-for="{link, title} in links" :key="`item-${link}`">
             <a :href="link" target="_blank">{{title}}</a>

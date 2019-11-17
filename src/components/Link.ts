@@ -9,9 +9,9 @@ class Link implements ILink {
     title: string = ''
     link: string = ''
 
-    constructor(title: string, link?: string) {
-        if (link) this.title = title
-        this.link = link || title
+    constructor(link: string, title: string = 'Ссылка') {
+        this.link = link
+        this.title = title
     }
 
     get url() {

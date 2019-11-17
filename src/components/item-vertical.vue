@@ -9,7 +9,7 @@
         {{smallTitle || title}}
       </span>
       <p>
-        <a :href="link.url" target="_blank">Ссылка</a>
+        <a :href="link.url" target="_blank">{{link.title}}</a>
       </p>
     </div>
     <div class="card-reveal">
@@ -18,7 +18,7 @@
         {{title}}
       </span>
       <p>{{desc}}</p>
-      <a :href="link.url" v-if="!links && link" class="default-link" target="_blank">Ссылка</a>
+      <a :href="link.url" v-if="!links && link" class="default-link" target="_blank">{{link.title}}</a>
       <template v-if="links">
         <p v-for="{link, title} in links" :key="`item-${link}`">
           <a :href="link" target="_blank">{{title}}</a>
@@ -37,10 +37,10 @@ import { IItem } from "./Item";
 @Component
 export default class ItemVertical extends Vue implements IItem {
   @Prop(String) title: string;
-  @Prop([String, Boolean]) smallTitle: string | boolean;
+  @Prop([String, Boolean]) smallTitle: string | false;
   @Prop(String) img: string;
   @Prop(String) desc: string;
-  @Prop([Object, Boolean]) link: ILink | boolean;
+  @Prop([Object, Boolean]) link: ILink | false;
   @Prop(Array) links: ILink[];
 }
 </script>
