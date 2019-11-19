@@ -14,5 +14,6 @@ jobs:
         FTP_USERNAME: my-jino-akk
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: docs
+        REMOTE_DIR: domains/xn----dtbqbarpid7k.xn--p1ai
         ARGS: --delete
         # --delete arg will delete files on the server if you've deleted them in git
