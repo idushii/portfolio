@@ -1,0 +1,17 @@
+name: Node CI
+
+on: push
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: my-jino-akk.myjino.ru
+        FTP_USERNAME: my-jino-akk
+        FTP_PASSWORD: my-jino-akk111
+        ARGS: --delete
+        # --delete arg will delete files on the server if you've deleted them in git
