@@ -36,11 +36,22 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class MyMenu extends Vue {
+  MenuInstance: any;
   mounted() {
+    let MenuInstance = this.MenuInstance;
     document.addEventListener("DOMContentLoaded", function() {
       var elems = document.querySelectorAll(".sidenav");
       //@ts-ignore
-      var instances = M.Sidenav.init(elems, {});
+      MenuInstance = M.Sidenav.init(elems, {});
+
+      document.querySelectorAll(".sidenav a").forEach(link => {
+        //@ts-ignore
+        link.onclick = function() {
+          if (link.classList.contains("router-link-active")) {
+            MenuInstance[0].close();
+          }
+        };
+      });
     });
   }
 }
