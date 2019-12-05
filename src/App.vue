@@ -8,7 +8,10 @@
             <router-link to="/">Портфолио</router-link>
           </li>
           <li>
-            <router-link to="/about">Резюме</router-link>
+            <router-link to="/About">Резюме</router-link>
+          </li>
+          <li>
+            <router-link to="/Contacts">Контакты</router-link>
           </li>
         </ul>
       </div>
