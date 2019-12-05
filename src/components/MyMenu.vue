@@ -36,6 +36,13 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class MyMenu extends Vue {
+  mounted() {
+    document.addEventListener("DOMContentLoaded", function() {
+      var elems = document.querySelectorAll(".sidenav");
+      //@ts-ignore
+      var instances = M.Sidenav.init(elems, {});
+    });
+  }
 }
 </script>
 

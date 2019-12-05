@@ -16,13 +16,6 @@ import MyMenu from "./components/MyMenu.vue";
   components: {MyMenu}
 })
 export default class App extends Vue {
-  mounted() {
-    document.addEventListener("DOMContentLoaded", function() {
-      var elems = document.querySelectorAll(".sidenav");
-      //@ts-ignore
-      var instances = M.Sidenav.init(elems, {});
-    });
-  }
 }
 </script>
 
