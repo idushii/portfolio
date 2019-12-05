@@ -1,36 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-      <div class="nav-wrapper indigo darken-1">
-        <router-link to="/" class="brand-logo">ИП Ильинов Николай</router-link>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-            <router-link to="/">Портфолио</router-link>
-          </li>
-          <li>
-            <router-link to="/About">Резюме</router-link>
-          </li>
-          <li>
-            <router-link to="/Contacts">Контакты</router-link>
-          </li>
-        </ul>
-        <a href="#" data-target="slide-out" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
-        </a>
-      </div>
-    </nav>
-    <ul id="slide-out" class="sidenav">
-      <li>
-        <router-link to="/">Портфолио</router-link>
-      </li>
-      <li>
-        <router-link to="/About">Резюме</router-link>
-      </li>
-      <li>
-        <router-link to="/Contacts">Контакты</router-link>
-      </li>
-    </ul>
-
+    <MyMenu />
     <div class="container">
       <router-view />
     </div>
@@ -40,8 +10,10 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
+import MyMenu from "./components/MyMenu.vue";
+
 @Component({
-  components: {}
+  components: {MyMenu}
 })
 export default class App extends Vue {
   mounted() {
