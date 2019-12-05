@@ -14,8 +14,23 @@
             <router-link to="/Contacts">Контакты</router-link>
           </li>
         </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
       </div>
     </nav>
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <router-link to="/">Портфолио</router-link>
+      </li>
+      <li>
+        <router-link to="/About">Резюме</router-link>
+      </li>
+      <li>
+        <router-link to="/Contacts">Контакты</router-link>
+      </li>
+    </ul>
+
     <div class="container">
       <router-view />
     </div>
@@ -28,11 +43,23 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({
   components: {}
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  mounted() {
+    document.addEventListener("DOMContentLoaded", function() {
+      var elems = document.querySelectorAll(".sidenav");
+      //@ts-ignore
+      var instances = M.Sidenav.init(elems, {});
+    });
+  }
+}
 </script>
 
 <style lang="scss">
 .brand-logo {
   margin-left: 1rem;
+}
+
+#slide-out {
+  padding-top: 2rem;
 }
 </style>
