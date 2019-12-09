@@ -21,10 +21,22 @@ export default new Vuex.Store({
         img: '14.jpg',
       },
       {
-        title: 'Генерация xlsx файла',
-        desc: 'Форма генерации xlsx таблицы с помощью vue js по заранее заданной таблице артикулов',
-        link: new Link('http://simle-db.j693917.myjino.ru/'),
-        img: '2.jpg',
+        title: 'Канал VueJS Jobs',
+        desc: 'Учебный проект. Представление данных канала в удобном визуальном виде.',
+        links: [
+          new Link('https://idushii.github.io/tg-vue-jobs/'),
+          new Link('https://github.com/idushii/tg-vue-jobs',  'Репозиторий'),
+        ],
+        img: '15.jpg'
+      },
+      {
+        title: 'API hh ru',
+        desc: 'Изучение api hh ru',
+        links: [
+          new Link('https://idushii.github.io/hhru/'),
+          new Link('https://github.com/idushii/hhru',  'Репозиторий'),
+        ],
+        img: '13.jpg'
       },
       {
         title: 'Список задач',
@@ -107,14 +119,11 @@ export default new Vuex.Store({
         img: '12.jpg',
       },
       {
-        title: 'API hh ru',
-        desc: 'Изучение api hh ru',
-        links: [
-          new Link('https://idushii.github.io/hhru/'),
-          new Link('https://github.com/idushii/hhru',  'Репозиторий'),
-        ],
-        img: '13.jpg'
-      }
+        title: 'Генерация xlsx файла',
+        desc: 'Форма генерации xlsx таблицы с помощью vue js по заранее заданной таблице артикулов',
+        link: new Link('http://simle-db.j693917.myjino.ru/'),
+        img: '2.jpg',
+      },
     ]
   },
   mutations: {
