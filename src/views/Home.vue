@@ -1,6 +1,14 @@
 <template>
   <div class="row">
     <div class="col s12">
+      <div class="input-field col s12">
+        <select multiple v-model="tagsFilter" @change="filterByTag">
+          <option value disabled selected>Выберите теги для фильтрации</option>
+          <option :value="tag" v-for="tag in tags" :key="`tag-${tag}`">{{tag}}</option>
+        </select>
+        <label>Отбор по тегам</label>
+      </div>
+
       <div class="switch right">
         Отобразить
         <label>
@@ -35,14 +43,37 @@ export default {
   name: "home",
   computed: {
     items() {
-      return this.$store.state.projects;
+      if (this.tagsFilter.length) {
+        let locTagsFilter = this.tagsFilter;
+        return this.$store.state.projects.filter(item => {
+          let flag = false;
+          for (let tag of locTagsFilter) {
+            console.log(item);
+            if (item.tags.includes(tag)) flag = true;
+          }
+          return flag;
+        });
+      } else return this.$store.state.projects;
+    },
+    tags() {
+      return this.$store.getters.tags;
     }
   },
   data: () => ({
-    inColumn: false
+    inColumn: false,
+    tagsFilter: []
   }),
   components: {
     ListItemRecord
+  },
+  mounted() {
+    document.addEventListener("DOMContentLoaded", function() {
+      var elems = document.querySelectorAll("select");
+      var instances = M.FormSelect.init(elems, {});
+    });
+  },
+  methods: {
+    filterByTag(e) {}
   }
 };
 </script>
