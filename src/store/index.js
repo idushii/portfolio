@@ -22,7 +22,7 @@ export default new Vuex.Store({
       },
       {
         title: 'Канал VueJS Jobs',
-        desc: 'Учебный проект. Представление данных канала в удобном визуальном виде.',
+        desc: 'Учебный проект. Представление данных канала в удобном визуальном виде.  Изучение VueJS + ts. Тесты компонентов.',
         links: [
           new Link('https://idushii.github.io/tg-vue-jobs/'),
           new Link('https://github.com/idushii/tg-vue-jobs',  'Репозиторий'),
@@ -31,7 +31,7 @@ export default new Vuex.Store({
       },
       {
         title: 'API hh ru',
-        desc: 'Изучение api hh ru',
+        desc: 'Изучение api hh ru. Изучение VueJS + ts. Тесты компонентов.',
         links: [
           new Link('https://idushii.github.io/hhru/'),
           new Link('https://github.com/idushii/hhru',  'Репозиторий'),
