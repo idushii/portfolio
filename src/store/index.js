@@ -27,7 +27,7 @@ export default new Vuex.Store({
         desc: 'Учебный проект. Представление данных канала в удобном визуальном виде.  Изучение VueJS + ts. Тесты компонентов.',
         links: [
           new Link('https://idushii.github.io/tg-vue-jobs/'),
-          new Link('https://github.com/idushii/tg-vue-jobs',  'Репозиторий'),
+          new Link('https://github.com/idushii/tg-vue-jobs', 'Репозиторий'),
         ],
         img: '15.jpg',
         tags: ['VueJS', 'TypeScript', 'Test'],
@@ -37,7 +37,7 @@ export default new Vuex.Store({
         desc: 'Изучение api hh ru. Изучение VueJS + ts. Тесты компонентов.',
         links: [
           new Link('https://idushii.github.io/hhru/'),
-          new Link('https://github.com/idushii/hhru',  'Репозиторий'),
+          new Link('https://github.com/idushii/hhru', 'Репозиторий'),
         ],
         img: '13.jpg',
         tags: ['VueJS', 'TypeScript', 'Test'],
@@ -46,7 +46,7 @@ export default new Vuex.Store({
         title: 'Laravel Simple Blog',
         desc: 'Учебный проект по Laravel. Изучение ORM, авторизация, миграции, сиды. Изучение привязки компонентов VueJS к проекту Laravel. Изучение шаблонизатора blade. Изучение использования API вместе с laravel.',
         links: [
-          new Link('https://github.com/idushii/laravel-simle-blog',  'Репозиторий'),
+          new Link('https://github.com/idushii/laravel-simle-blog', 'Репозиторий'),
         ],
         img: '16.jpg',
         tags: ['Laravel', 'Учебный проект', 'ORM', 'php'],
@@ -70,8 +70,8 @@ export default new Vuex.Store({
         title: 'Проект "Изучение китайского языка"',
         desc: 'Реализовано с использованием Nuxt JS',
         links: [
-          new Link( 'http://sayana.surge.sh', 'Заготовка front'),
-          new Link( 'https://github.com/idushii/Kitai', 'Полный репозиторий')
+          new Link('http://sayana.surge.sh', 'Заготовка front'),
+          new Link('https://github.com/idushii/Kitai', 'Полный репозиторий')
         ],
         img: '5.jpg',
         tags: ['VueJS', 'NuxtJS', 'MySQL'],
@@ -80,9 +80,9 @@ export default new Vuex.Store({
         title: 'Проект "Чат"',
         desc: 'Реализовано с использованием websockets',
         links: [
-          new Link('http://chat.j693917.myjino.ru/#/', 'Демо front',),
-          new Link('https://bitbucket.org/Nic34_/chat/', 'Репозиторий front',),
-          new Link('https://bitbucket.org/Nic34_/chat-server/', 'Репозиторий back',),
+          new Link('http://chat.j693917.myjino.ru/#/', 'Демо front'),
+          new Link('https://bitbucket.org/Nic34_/chat/', 'Репозиторий front'),
+          new Link('https://bitbucket.org/Nic34_/chat-server/', 'Репозиторий back'),
         ],
         img: '6.jpg',
         tags: ['VueJS', 'NodeJS', 'WebSockets', 'Учебный проект'],
@@ -149,6 +149,14 @@ export default new Vuex.Store({
         tags: ['Xlsx', 'VueJS'],
       },
     ]
+  },
+  getters: {
+    tags: state => {
+      let tags = state.projects.map(item => item.tags)
+      let result = {}
+      for (let items of tags) for (let tag of items) result[tag] = true
+      return Object.keys(result)
+    }
   },
   mutations: {
   },
