@@ -48,7 +48,6 @@ export default {
         return this.$store.state.projects.filter(item => {
           let flag = false;
           for (let tag of locTagsFilter) {
-            console.log(item);
             if (item.tags.includes(tag)) flag = true;
           }
           return flag;
