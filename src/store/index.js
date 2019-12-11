@@ -81,8 +81,8 @@ export default new Vuex.Store({
         desc: 'Реализовано с использованием websockets',
         links: [
           new Link('http://chat.j693917.myjino.ru/#/', 'Демо front'),
-          new Link('https://bitbucket.org/Nic34_/chat/', 'Репозиторий front'),
-          new Link('https://bitbucket.org/Nic34_/chat-server/', 'Репозиторий back'),
+          new Link('https://bitbucket.org/app-ew/chat/', 'Репозиторий front'),
+          new Link('https://bitbucket.org/app-ew/chat-server/', 'Репозиторий back'),
         ],
         img: '6.jpg',
         tags: ['VueJS', 'NodeJS', 'WebSockets', 'Учебный проект'],
