@@ -101,7 +101,10 @@ export default new Vuex.Store({
       {
         title: 'Bootstrap компоненты',
         desc: 'npm пакет "Bootstrap компоненты"',
-        link: new Link("https://www.npmjs.com/package/vue-bootstrap-elements"),
+        links: [
+          new Link("https://www.npmjs.com/package/vue-bootstrap-elements"),
+          new Link("https://github.com/idushii/vue-bootstrap-elements", "Репозиторий")
+        ],
         img: '8.jpg',
         tags: ['VueJS', 'Bootstrap', 'NPM пакет'],
       },
