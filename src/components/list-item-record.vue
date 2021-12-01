@@ -34,7 +34,7 @@ export default class ListItemRecord extends Vue implements IRecord {
 
   get _img() {
     if (this.img)
-      return `https://www.xn----dtbqbarpid7k.xn--p1ai/img/prev/${this.img}`;
+      return `https://idushii.github.io/portfolio/img/prev/${this.img}`;
     else return `https://via.placeholder.com/150`;
   }
   get _link() {
